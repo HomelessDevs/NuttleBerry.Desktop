@@ -1,0 +1,37 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Client.Views.LoginView">
+    <DockPanel>
+        <TextBlock
+            HorizontalAlignment="Center"
+            Text="NuttleBerry"
+            FontSize="36"
+            DockPanel.Dock="Top">
+        </TextBlock>
+        
+        <StackPanel Spacing="5" VerticalAlignment="Center">
+            <TextBox
+                HorizontalAlignment="Center"
+                Watermark="Login"
+                Width="300">
+            </TextBox>
+            
+            <TextBox
+                HorizontalAlignment="Center"
+                Watermark="Password"
+                Width="300"
+                PasswordChar="*">
+            </TextBox>
+            
+            <Button
+                HorizontalAlignment="Center"
+                Content="Login"
+                HorizontalContentAlignment="Center"
+                Width="100">
+            </Button>
+        </StackPanel>
+    </DockPanel>
+</UserControl>
