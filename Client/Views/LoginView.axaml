@@ -2,8 +2,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModel="clr-namespace:Client.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Client.Views.LoginView">
+             
+    <UserControl.DataContext>
+        <viewModel:LoginViewModel></viewModel:LoginViewModel>
+    </UserControl.DataContext>
+    
     <DockPanel>
         <TextBlock
             HorizontalAlignment="Center"
@@ -16,21 +22,24 @@
             <TextBox
                 HorizontalAlignment="Center"
                 Watermark="Login"
-                Width="300">
+                Width="300"
+                Name="{Binding Login}">
             </TextBox>
             
             <TextBox
                 HorizontalAlignment="Center"
                 Watermark="Password"
                 Width="300"
-                PasswordChar="*">
+                PasswordChar="*"
+                Name="{Binding Password}">
             </TextBox>
             
             <Button
                 HorizontalAlignment="Center"
                 Content="Login"
                 HorizontalContentAlignment="Center"
-                Width="100">
+                Width="100"
+                Name="LoginButton">
             </Button>
         </StackPanel>
     </DockPanel>
